@@ -1,7 +1,8 @@
 # FirstWeek
 [상단 부분]
 
-![1.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f39a8228-885b-4caa-8430-78eb293a05d7/1.png)
+<img width="1140" alt="234" src="https://user-images.githubusercontent.com/89892954/131937485-04f7a7c0-bd6d-494b-8ba4-d5da2806b702.png">
+
 
 1. 먼저 LinearLayout을 만들어 화면에 보이는 뷰들을 모두 포함할 수 있도록 했습니다. 그리고 shape 드로어블을 사용해 하단 부분의 모서리를 둥글게 설정하도록 했습니다.
 2. Toolbar를 사용해 상단의 돋보기와 알람 아이콘을 언제든 클릭할 수 있도록 설정했습니다.
@@ -18,7 +19,8 @@
 
 [하단 부분]
 
-![13.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4d84fe1b-ae65-4657-8608-7592d9587a74/13.png)
+<img width="1096" alt="13" src="https://user-images.githubusercontent.com/89892954/131937526-55d53dc0-b99b-48da-b53b-be5c0527e069.png">
+
 
 1. TabLayout을 이용해 페이지를 전환하는 이벤트를 사용자가 사용할 수 있도록 설정했습니다.
 
