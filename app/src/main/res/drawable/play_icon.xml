@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="90"
+    android:viewportHeight="50">
+
+    <group android:name="play_icon_first">
+        <!-- 첫번째 바 -->
+        <path
+            android:name="first"
+            android:pathData="M 10,50 L 10,40 L 20,40 L 20,50 Z"
+            android:fillColor="@color/doubledarkgray" />
+    </group>
+</vector>

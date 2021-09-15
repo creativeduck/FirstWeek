@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/relativeAd">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgAd"
+        android:layout_width="130dp"
+        android:layout_height="140dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginBottom="14dp"
+        android:src="@drawable/adimg"
+        app:shapeAppearanceOverlay="@style/roundedCorners" />
+
+    <TextView
+        android:id="@+id/titleAd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/imgAd"
+        android:text="ARITAUM"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="17sp"/>
+    <ImageView
+        android:id="@+id/Ad"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/ad"
+        android:scaleType="fitXY"
+        android:layout_toEndOf="@id/titleAd"/>
+    <TextView
+        android:id="@+id/contentAd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleAd"
+        android:layout_toEndOf="@+id/imgAd"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="20dp"
+        android:text="모디 글램 네일즈 1+1! 아리따움 빅세일"
+        android:textColor="@color/doubledarkgray"
+        android:textSize="14sp"/>
+</RelativeLayout>

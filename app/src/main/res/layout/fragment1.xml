@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:background="@color/white"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="다른 지역을 추천해드릴까요?"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+                <Button
+                    android:layout_width="107dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/btn_shape"
+                    android:text="지역변경"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:background="@color/white"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp">
+                <TextView
+                    android:id="@+id/textre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="재예약 많은 디자이너"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/profile"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:cardCornerRadius="40dp"
+                    app:cardElevation="0dp"
+                    android:layout_below="@+id/textre"
+                    android:layout_margin="10dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/stylist"
+                        android:scaleType="centerCrop"
+                        />
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textre"
+                    android:layout_toEndOf="@+id/profile"
+                    android:text="Stylist 지"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name"
+                    android:layout_toEndOf="@+id/profile"
+                    android:layout_margin="5dp"
+                    android:text="HAIR THE QOO 스타트점"
+                    android:textColor="@color/doubledarkgray"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/cut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/location"
+                    android:layout_toEndOf="@+id/profile"
+                    android:background="@drawable/tag_shape"
+                    android:padding="3dp"
+                    android:text="#커트"
+                    android:textColor="@color/doubledarkgray"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/downpum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/location"
+                    android:layout_toEndOf="@+id/cut"
+                    android:background="@drawable/tag_shape"
+                    android:layout_marginLeft="10dp"
+                    android:padding="3dp"
+                    android:text="#다운펌"
+                    android:textColor="@color/doubledarkgray"
+                    android:textSize="14sp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/downpum" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:orientation="vertical">
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/photo_viewpager"
+                android:background="@color/gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/photo_tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabBackground="@drawable/tab_selector"
+                app:tabGravity="center"
+                app:tabIndicatorHeight="0dp"
+                app:tabSelectedTextColor="@color/black"
+                app:tabTextColor="@color/gray"/>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:cardCornerRadius="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            app:cardElevation="2dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp">
+                <TextView
+                    android:id="@+id/redie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="염색 재예약 많은 헤어샵"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/shop"
+                    android:layout_width="165dp"
+                    android:layout_height="120dp"
+                    android:layout_below="@+id/redie"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/shopimg"
+                    app:shapeAppearanceOverlay="@style/roundedCorners" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/shop"
+                    android:text="HAIR THE QOO 스타트점"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+
+                <ImageView
+                    android:id="@+id/imgRating"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/star"
+                    android:layout_below="@+id/title"/>
+                <TextView
+                    android:id="@+id/textRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title"
+                    android:layout_toEndOf="@+id/imgRating"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="4.9"
+                    android:textColor="@color/doubledarkgray"
+                    android:textSize="17sp"/>
+
+                <ImageView
+                    android:id="@+id/imgMessage"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/message"
+                    android:layout_below="@+id/title"
+                    android:layout_toEndOf="@+id/textRating"/>
+                <TextView
+                    android:id="@+id/textMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title"
+                    android:layout_toEndOf="@+id/imgMessage"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="2,309"
+                    android:textColor="@color/doubledarkgray"
+                    android:textSize="17sp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/textMessage"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/littlegray"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="타임세일 진행중 헤어샵"
+                android:layout_marginStart="13dp"
+                android:textStyle="bold"
+                android:textSize="19sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="13dp"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/gray"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:orientation="horizontal"
+                    android:backgroundTint="@color/gray">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="310dp"
+                        android:layout_height="140dp"
+                        app:cardElevation="2dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_margin="7dp">
+                        <com.ssacproject.firstweek.TimeSaleView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:date="평일 10:00 ~ 14:00 예약 시 추가할인"
+                            app:img="@drawable/nail7"
+                            app:textMessage="66"
+                            app:textRating="4.8"
+                            app:title="오엘 쌀롱(OLSALON) 본점" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="310dp"
+                        android:layout_height="140dp"
+                        app:cardElevation="2dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_margin="7dp">
+                        <com.ssacproject.firstweek.TimeSaleView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:date="월,화,수,목 10:30 ~ 18:00 예약 시 추가할인"
+                            app:img="@drawable/nail6"
+                            app:textMessage="758"
+                            app:textRating="4.7"
+                            app:title="박승철헤어스투디오 연신내점" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="310dp"
+                        android:layout_height="140dp"
+                        app:cardElevation="2dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_margin="7dp">
+                        <com.ssacproject.firstweek.TimeSaleView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:date="매일 11:00 ~ 16:00 예약 시 추가할인"
+                            app:img="@drawable/nail7"
+                            app:textMessage="98"
+                            app:textRating="4.9"
+                            app:title="벨르헤어 갈현점" />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="예약 가능한 네일샵"
+                android:layout_marginStart="13dp"
+                android:textStyle="bold"
+                android:textSize="19sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"/>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:backgroundTint="@color/gray"
+                    android:padding="10dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="295dp"
+                        android:layout_height="245dp"
+                        app:cardElevation="2dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_margin="7dp">
+                        <com.ssacproject.firstweek.NailShop
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:titlenail="피카소"
+                            app:imgnail="@drawable/nail1"
+                            app:textRatingnail="5.0"
+                            app:textMessagenail="1"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="295dp"
+                        android:layout_height="245dp"
+                        app:cardElevation="2dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_margin="7dp">
+                        <com.ssacproject.firstweek.NailShop
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:titlenail="네일달로 본점"
+                            app:imgnail="@drawable/nail2"
+                            app:textRatingnail="5.0"
+                            app:textMessagenail="2"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="295dp"
+                        android:layout_height="245dp"
+                        app:cardElevation="2dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_margin="7dp">
+                        <com.ssacproject.firstweek.NailShop
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:titlenail="바른네일 본점"
+                            app:imgnail="@drawable/nail3"
+                            app:textRatingnail="4.7"
+                            app:textMessagenail="13"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="295dp"
+                        android:layout_height="245dp"
+                        app:cardElevation="2dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_margin="7dp">
+                        <com.ssacproject.firstweek.NailShop
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:titlenail="우리네일만나 연신내점"
+                            app:imgnail="@drawable/nail4"
+                            app:textRatingnail="5.0"
+                            app:textMessagenail="1"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="295dp"
+                        android:layout_height="245dp"
+                        app:cardElevation="2dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_margin="7dp">
+                        <com.ssacproject.firstweek.NailShop
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:titlenail="쥬네일 은평점"
+                            app:imgnail="@drawable/nail5"
+                            app:textRatingnail="4.2"
+                            app:textMessagenail="8"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="295dp"
+                        android:layout_height="245dp"
+                        app:cardElevation="2dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_margin="7dp">
+                        <com.ssacproject.firstweek.NailShop
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:titlenail="네네살롱"
+                            app:imgnail="@drawable/nail6"
+                            app:textRatingnail="5.0"
+                            app:textMessagenail="62"/>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="5dp">
+            <com.ssacproject.firstweek.BottomAdView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:imgAd="@drawable/adimg"
+                app:titleAd="ARITAUM"
+                app:contentAd="모디 글램 네일즈 1+1! 아리따움 빅세일"/>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="17dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="13dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="공지"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[이벤트] 아윤채 브랜드 제품 기획전"
+                android:textColor="@color/black"
+                android:layout_marginStart="7dp"
+                android:textSize="15sp"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=">"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white">
+                <TextView
+                    android:id="@+id/textchange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="11dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="사업자정보 · 이용약관 · 개인정보처리방침 · 사업자정보확인"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="9sp"
+                    android:text="(주)와이어트는 통신판매중개자로서 카카오헤어샵의 거래당사자가 아니며,"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="9sp"
+                    android:text="입점판매자가 등록한 상품정보 및 거래에 대해 책임을 지지 않습니다."/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textSize="9sp"
+                    android:text="ⓒ Wyatt"
+                    android:layout_marginBottom="5dp"/>
+            </LinearLayout>
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>

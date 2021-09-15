@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TimeSaleView">
+        <attr name="img" format="reference|integer"/>
+        <attr name="title" format="reference|string"/>
+        <attr name="date" format="reference|string"/>
+        <attr name="textRating" format="reference|string"/>
+        <attr name="textMessage" format="reference|string"/>
+    </declare-styleable>
+
+    <declare-styleable name="NailShop">
+        <attr name="imgnail" format="reference|integer"/>
+        <attr name="titlenail" format="reference|string"/>
+        <attr name="textRatingnail" format="reference|string"/>
+        <attr name="textMessagenail" format="reference|string"/>
+    </declare-styleable>
+
+    <declare-styleable name="StyleBookView">
+        <attr name="imgbook" format="reference|integer"/>
+        <attr name="booktext1" format="reference|string"/>
+        <attr name="booktext2" format="reference|string"/>
+        <attr name="booktext3" format="reference|string"/>
+    </declare-styleable>
+
+    <declare-styleable name="BottomAdView">
+        <attr name="imgAd" format="reference|integer"/>
+        <attr name="titleAd" format="reference|string"/>
+        <attr name="contentAd" format="reference|string"/>
+    </declare-styleable>
+
+</resources>
